@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="lab.visual.movieapp.controller.MovieDetailController">
+    <top>
+        <StackPane styleClass="backdrop-container">
+            <ImageView fx:id="backdropImage" fitHeight="300" fitWidth="800" preserveRatio="true" />
+            <VBox alignment="BOTTOM_LEFT" styleClass="backdrop-overlay">
+                <padding>
+                    <Insets bottom="20" left="20" right="20" top="20" />
+                </padding>
+                <Label fx:id="titleLabel" styleClass="detail-title" text="Movie Title" />
+            </VBox>
+        </StackPane>
+    </top>
+
+    <center>
+        <HBox spacing="20" styleClass="detail-content">
+            <padding>
+                <Insets bottom="20" left="20" right="20" top="20" />
+            </padding>
+
+            <ImageView fx:id="posterImage" fitHeight="400" fitWidth="250" preserveRatio="true" styleClass="detail-poster" />
+
+            <VBox fx:id="detailContainer" spacing="15" HBox.hgrow="ALWAYS">
+                <Label fx:id="overviewLabel" styleClass="detail-overview" text="Movie overview..." wrapText="true" />
+                <Label fx:id="releaseDateLabel" styleClass="detail-info" text="Release Date: " />
+                <Label fx:id="ratingLabel" styleClass="detail-info" text="Rating: " />
+                <Label fx:id="voteCountLabel" styleClass="detail-info" text="Votes: " />
+                <Button fx:id="addToWishlistButton" styleClass="load-more-btn" text="+" onAction="#handleAddToWishlist" />
+            </VBox>
+        </HBox>
+    </center>
+</BorderPane>
