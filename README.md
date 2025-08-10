@@ -38,7 +38,7 @@ A **JavaFX-based** movie browser application that fetches data from **TMDB API**
 1. **Clone the repo**:  
    ```sh
    git clone https://github.com/yourusername/movflux.git
-   cd movflux
+   cd movflix
    ```
 
 2. **Configure environment variables**:  
